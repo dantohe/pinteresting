@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'rails', '4.1.8'
-gem 'sqlite3'
+
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -29,3 +29,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 #Coffee script 1.9.0 doesn't play well with Windows. On my Windows 7 machine, using version 1.8.0 solved this problem.
 gem 'coffee-script-source', '1.8.0'
+
+
+group :development, :test do
+	gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
