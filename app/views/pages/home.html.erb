@@ -2,9 +2,12 @@
 	<h1>Ruby, Rails and Bootstrap</h1>
 	
 	<!--<button type="button" class="btn btn-primary btn"><%= link_to "Sign Up", "#" %></button>-->
+	<% if user_signed_in? %>
+	<% else %>
 	<p>
-		<%= link_to "Log in", "#", class: "btn btn-default btn-lg" %>
-		<%= link_to "Sign up", "#", class: "btn btn-primary btn-lg" %>
+		<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+		<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 	</p>  
+	<% end %>
 	<!--<p> Yet another <%= link_to "here", "#" %>. </p>-->
 </div>
