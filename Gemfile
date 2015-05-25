@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass' 
 gem 'devise'
+gem 'paperclip', '~> 4.2'
 
 #Coffee script 1.9.0 doesn't play well with Windows. On my Windows 7 machine, using version 1.8.0 solved this problem.
 gem 'coffee-script-source', '1.8.0'
