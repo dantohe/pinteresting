@@ -6,12 +6,14 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass' 
 gem 'devise'
 gem 'paperclip', github: 'thoughtbot/paperclip' 
 gem 'aws-sdk', '< 2.0'
+gem 'masonry-rails'
 
 #Coffee script 1.9.0 doesn't play well with Windows. On my Windows 7 machine, using version 1.8.0 solved this problem.
 gem 'coffee-script-source', '1.8.0'
