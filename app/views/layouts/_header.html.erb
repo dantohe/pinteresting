@@ -17,8 +17,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", about_path %></li>
+        <li>
+          <%= link_to root_path do %>
+          <span class="glyphicon glyphicon-home"></span>Home
+          <% end %>
+        </li>
+        <!-- <li><%= link_to "Home", root_path %></li> -->
+        <!-- glyphicon glyphicon-user -->
+        <li>
+          <%= link_to about_path do %>
+          <span class="glyphicon glyphicon-user"></span>About
+          <% end %>
+        </li>
+        <!-- <li><%= link_to "About", about_path %></li> -->
         <% if user_signed_in? %>
         <li>
           <%= link_to new_pin_path do %>
@@ -38,7 +49,13 @@
         </li>
         <!-- <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li> -->
         <% else %>
-        <li><%= link_to "Sign in", new_user_session_path %></li>
+        <li>
+          <%= link_to new_user_session_path do %>
+          <span class="glyphicon glyphicon-log-in"></span>Sign in
+          <% end %>
+        </li>
+        
+        <!-- <li><%= link_to "Sign in", new_user_session_path %></li> -->
         <% end %>
       <!--<li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
