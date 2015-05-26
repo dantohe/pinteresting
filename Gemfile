@@ -14,6 +14,8 @@ gem 'devise'
 gem 'paperclip', github: 'thoughtbot/paperclip' 
 gem 'aws-sdk', '< 2.0'
 gem 'masonry-rails'
+gem 'will_paginate', '~> 3.0.5'
+gem 'will_paginate-bootstrap'
 
 #Coffee script 1.9.0 doesn't play well with Windows. On my Windows 7 machine, using version 1.8.0 solved this problem.
 gem 'coffee-script-source', '1.8.0'
