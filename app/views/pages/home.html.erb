@@ -1,12 +1,17 @@
 <div class="jumbotron">
-	<h1>Ruby, Rails and Bootstrap</h1>
-	
+	<h1>A web application using Ruby on Rails, Bootstrap etc</h1>
+	<h3>An application similar to pinterest.</h3>
+	<h3> It was built using Ruby on Rails, Sqllite and Bottstrap for UI.</h3>
+	<h3> Other stuff used: devise (user managament and authentication), paperclip ImageMagic (image management). </h3>
+	<h3>Images are stored using on Amazon S3.</h3>
+	<h3>The application is deployed on Heroku.</h3>
+	<h3>The code is on <%= link_to "Github", "https://github.com/dantohe/pinteresting", :target => "_blank" %>.</h3>
+
 	<!--<button type="button" class="btn btn-primary btn"><%= link_to "Sign Up", "#" %></button>-->
 	<% if user_signed_in? %>
 	<% else %>
 	<p>
-		<h2>An application similar to pinterest.</h2>
-		<h2> It was built using Ruby on Rails, Sqllite and Bottstrap for UI. Other stuff used: devise (user managament and authentication), paperclip ImageMagic (image management). </h2>
+
 		<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
 		<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 	</p>  
