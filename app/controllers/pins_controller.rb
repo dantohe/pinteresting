@@ -4,42 +4,42 @@ class PinsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @pins = Pin.all
-  end
+   @pins = Pin.all.order("created_at DESC")
+ end
 
-  def show
-  end
+ def show
+ end
 
-  def new
-    @pin = current_user.pins.build
-  end
+ def new
+  @pin = current_user.pins.build
+end
 
-  def edit
-  end
+def edit
+end
 
-  def create
-    @pin = current_user.pins.build(pin_params)
-    if @pin.save
-      redirect_to @pin, notice: 'Pin was successfully created.'
-    else
-      render action: 'new'
-    end
+def create
+  @pin = current_user.pins.build(pin_params)
+  if @pin.save
+    redirect_to @pin, notice: 'Pin was successfully created.'
+  else
+    render action: 'new'
   end
+end
 
-  def update
-    if @pin.update(pin_params)
-      redirect_to @pin, notice: 'Pin was successfully updated.'
-    else
-      render action: 'edit'
-    end
+def update
+  if @pin.update(pin_params)
+    redirect_to @pin, notice: 'Pin was successfully updated.'
+  else
+    render action: 'edit'
   end
+end
 
-  def destroy
-    @pin.destroy
-    redirect_to pins_url
-  end
+def destroy
+  @pin.destroy
+  redirect_to pins_url
+end
 
-  private
+private
     # Use callbacks to share common setup or constraints between actions.
     def set_pin
       @pin = Pin.find_by(id: params[:id])
